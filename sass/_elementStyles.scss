@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600,700|Source+Code+Pro');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 200ms ease-in-out;
+    overflow-wrap: break-word;
+}
+
+*:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', 'Verdana', sans-serif;
+    overflow-x: hidden;
+}
+
+@import 'variables';
+
+@import 'mixins';
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    text-transform: capitalize;
+    overflow-wrap: break-word;
+
+    a > & {
+        margin-bottom: 0 !important;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+h3 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+h5 {
+    font-size: 1.8rem;
+    margin-bottom: 1.25rem;
+}
+
+h6 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+main#main,
+main,
+#main {
+    max-width: $wrap;
+    @extend %center;
+}
+
+section {
+    padding: 2rem 1rem;
+    border-bottom: 1px solid darken($primary, 40%);
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    section {
+        margin-top: 2rem;
+        padding: 2rem 0rem;
+        border-top: 1px solid darken($primary, 40%);
+    }
+}
+
+p {
+    // max-width: 800px;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+
+    a {
+        text-decoration: underline;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+a, button {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+    &:active {
+        transform: scale(.9);
+    }
+}
+
+code {
+    display: block;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: max-content;
+    max-width: 100%;
+    border: 1px solid darken($primary, 10%);
+    background: lighten($primary, 10%);
+    border-radius: .25rem;
+    font-size: 1rem;
+    font-family: 'Source Code Pro', monospace;
+    white-space: pre-wrap;
+    text-align: left;
+
+    p & {
+        display: inline;
+        padding: 0 .25rem;
+    }
+}
+
+header, footer {
+    background: $primary;
+}
+
+footer {
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: $wrap;
+    @extend %center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    a, button {
+        padding: .5rem 1rem;
+        margin: .25rem;
+    }
+
+    @include md {
+        justify-content: space-between;
+    }
+}
+
+input, textarea, select {
+    display: block;
+    margin-top: .5rem;
+    font-size: inherit;
+    font-family: inherit;
+    padding: .25rem;
+}

@@ -1,0 +1,152 @@
+@import 'variables';
+
+@import 'mixins';
+
+// callout boxes like in magazines
+
+// quotes
+
+
+// font sizes
+// ============================================= //
+.tsm {font-size: .8rem;}
+
+.treg {font-size: 1rem;}
+
+.tmd {font-size: 1.6rem;}
+
+.tlg {font-size: 2rem;}
+
+.txl {font-size: 3rem;}
+
+
+// font weight
+// ============================================= //
+.wlight {font-weight: 300;}
+
+.wreg {font-weight: 400;}
+
+.semi {font-weight: 600;}
+
+.bold {font-weight: 700;}
+
+.italic {font-style: italic;}
+
+
+// text alignment
+// ============================================= //
+.tcenter {text-align: center;}
+
+.tright {text-align: right;}
+
+.tleft {text-align: left;}
+
+.tjustify {text-align: justify;}
+
+.tjustifyAll {text-align: justify-all;}
+
+
+// text transform
+// ============================================= //
+.lowercase {text-transform: lowercase;}
+
+.capitalize {text-transform: capitalize;}
+
+.uppercase {text-transform: uppercase;}
+
+.nocase {text-transform: none;}
+
+
+// width
+// ============================================= //
+.contentWidth {
+    width: max-content !important;
+    max-width: 100%;
+}
+
+
+// margins
+// ============================================= //
+.center {   // this horizontally centers block elements
+    @extend %center;
+}
+
+.m0 {   // removes margin completely
+    margin: 0 !important;
+}
+
+.m1 {
+    margin: .5rem;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: $wrap;
+    @extend %center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    a, button {
+        padding: .5rem 1rem;
+        margin: .25rem;
+    }
+
+    @include md {
+        justify-content: space-between;
+    }
+}
+
+.btns {
+    a, button {
+        display: inline-block;
+        padding: .5rem 1rem;
+        margin: .25rem;
+        background: darken($primary, 40%);
+        color: lighten($primary, 40%);
+        border-radius: .25rem;
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: .5rem 1rem;
+    margin: .25rem;
+    background: darken($primary, 40%);
+    color: lighten($primary, 40%);
+    border-radius: .25rem;
+}
+
+.border {
+    border: 2px solid darken($primary, 40%);
+    border-radius: .25rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    @include md {
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.pad {
+    padding: 1rem;
+
+    @include md {
+        padding: 2rem;
+    }
+}
+

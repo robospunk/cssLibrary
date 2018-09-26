@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>CSS Library</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href=""><h1 class="tlg tcenter">Dat Style Library</h1></a>
+            <div class="flex btns">
+                <a href="">navLink 1</a>
+                <a href="">navLink 2</a>
+                <a href="">navLink 3</a>
+                <a href="">navLink 4</a>
+                <a href="">navLink 5</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <!-- headings -->
+        <section>
+            <h2 class="tcenter">Here are some headings</h2>
+            <div class="border contentWidth center">
+                <h1>heading 1</h1>
+                <h2>heading 2</h2>
+                <h3>heading 3</h3>
+                <h4>heading 4</h4>
+                <h5>heading 5</h5>
+                <h6>heading 6</h6>
+            </div>
+
+            <p class="semi tmd tcenter">Headings are capitalized by default.</p>
+            <div class="tright contentWidth center">
+                    <p>For lowercase add the class <code>"lowercase"</code></p>
+                    <p>For uppercase, <code>"uppercase"</code></p>
+                    <p>To capitalize, <code>"capitalize"</code></p>
+                    <p>And to remove any text-transforming, add the class <code>"nocase"</code></p>
+            </div>
+        </section>
+
+        <!-- paragraphs -->
+        <section>
+            <h2 class="tcenter">Here are some paragraphs</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laudantium aut beatae unde illum, eligendi officiis numquam itaque corporis labore consectetur quae aliquid modi ipsam veniam nemo veritatis perferendis error architecto fugit perspiciatis suscipit. At eum dolores harum commodi veniam, voluptatum eius nesciunt consequuntur modi cupiditate cumque odit laborum velit!</p>
+                <p>Here is an example of stupid long words without spaces. WHOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!</p>
+                <p>
+                    Here are some <a href="">Links</a> within a <a href="">paragraph.</a> YEEEEEEEEEEEEEEEE. <a href="">link.</a>
+                </p>
+        </section>
+
+        <!-- semantic elements -->
+        <section>
+            <div class="tcenter">
+                <h2>Semantic Elements</h2>
+
+                <p>
+                    This library is about speed, which means you can write HTML without adding any classes, and it should look good.
+                </p>
+                <p>
+                    Classes are optional.
+                </p>
+                <p>
+                    With this being said, you should be using semantic elements for this to work correctly.
+                </p>
+                <div class="border center contentWidth">
+                    <p class="tmd">
+                        <a href="">&lt;header&gt;</a>
+                    </p>
+                    <p class="tmd">
+                        <a href="">&lt;nav&gt;</a>
+                    </p>
+                    <p class="tmd">
+                        <a href="">&lt;main&gt;</a>
+                    </p>
+                    <p class="tmd">
+                        <a href="">&lt;section&gt;</a>
+                    </p>
+                    <p class="tmd">
+                        <a href="">&lt;article&gt;</a>
+                    </p>
+                    <p class="tmd">
+                        <a href="">&lt;aside&gt;</a>
+                    </p>
+                    <p class="tmd">
+                        <a href="">&lt;footer&gt;</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="tcenter">
+            <h2>Buttons</h2>
+            <p>Buttons and anchor tags are styled to look the same.</p>
+            <p>By default, they do not have a background color or outline.</p>
+
+            <div class="flex column border contentWidth center">
+                <button>&lt;button&gt;</button>
+                <a href="" class="m1">&lt;a&gt;</a>
+                <button class="btn">&lt;button class=&quot;btn&quot;&gt;</button>
+                <a class="btn">&lt;a class=&quot;btn&quot;&gt;</a>
+            </div>
+
+            <p>You can style buttons individually with the class <code>"btn"</code></p>
+            <p>Or in groups <code>"btns"</code></p>
+
+            <!-- formatted code explaining button classes -->
+<code class="center">&lt;div class=&quot;btns&quot;&gt;&#13;&#10;    &lt;a&gt;button 1&lt;/a&gt;&#13;&#10;    &lt;a&gt;button 2&lt;/a&gt;&#13;&#10;    &lt;a&gt;button 3&lt;/a&gt;&#13;&#10;&lt;/div&gt;</code>
+
+            <p>The code above would output this:</p>
+
+            <div class="flex column border contentWidth center">
+                <div class="btns">
+                    <a>button 1</a>
+                    <a>button 2</a>
+                    <a>button 3</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>footer</p>
+    </footer>
+</body>
+</html>

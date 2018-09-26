@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600,700|Source+Code+Pro');
 
+@import 'variables';
+
+@import 'mixins';
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -17,14 +21,11 @@ body {
     overflow-x: hidden;
 }
 
-@import 'variables';
-
-@import 'mixins';
-
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     text-transform: capitalize;
     overflow-wrap: break-word;
+    text-align: center;
 
     a > & {
         margin-bottom: 0 !important;
@@ -32,13 +33,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 3.25rem;
     margin-bottom: 3rem;
+
+    @include md {
+        font-size: 4rem;
+    }
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
     margin-bottom: 2.5rem;
+
+    @include md {
+        font-size: 3rem;
+    }
 }
 
 h3 {
@@ -78,8 +87,13 @@ section {
 
     section {
         margin-top: 2rem;
-        padding: 2rem 0rem;
-        border-top: 1px solid darken($primary, 40%);
+        padding: 2rem .5rem;
+        border: none;
+        background: lighten($primary, 12%);
+
+        section {
+            padding: 2rem 0;
+        }
     }
 }
 
@@ -122,10 +136,11 @@ code {
     display: block;
     padding: 1rem;
     margin-bottom: 1rem;
+    @extend %center;
     width: max-content;
     max-width: 100%;
     border: 1px solid darken($primary, 10%);
-    background: lighten($primary, 10%);
+    background: lighten($primary, 12%);
     border-radius: .25rem;
     font-size: 1rem;
     font-family: 'Source Code Pro', monospace;
@@ -146,30 +161,20 @@ footer {
     padding: 1rem;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: $wrap;
-    @extend %center;
-    padding: 1rem;
-    margin-bottom: 1rem;
-
-    a, button {
-        padding: .5rem 1rem;
-        margin: .25rem;
-    }
-
-    @include md {
-        justify-content: space-between;
-    }
-}
-
 input, textarea, select {
     display: block;
     margin-top: .5rem;
     font-size: inherit;
     font-family: inherit;
     padding: .25rem;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid darken($primary, 40%);
+    margin: 1rem;
+
+    @include md {
+        margin: 2rem 1rem;
+    }
 }

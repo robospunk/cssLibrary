@@ -10,7 +10,7 @@
 <body>
     <header>
         <nav>
-            <a href=""><h1 class="tlg tcenter">Dat Style Library</h1></a>
+            <a href=""><h1 class="tlg">Dat Style Library</h1></a>
             <div class="flex btns">
                 <a href="">navLink 1</a>
                 <a href="">navLink 2</a>
@@ -24,7 +24,7 @@
     <main id="main">
         <!-- headings -->
         <section>
-            <h2 class="tcenter">Here are some headings</h2>
+            <h2>Here are some headings</h2>
             <div class="border contentWidth center">
                 <h1>heading 1</h1>
                 <h2>heading 2</h2>
@@ -34,7 +34,7 @@
                 <h6>heading 6</h6>
             </div>
 
-            <p class="semi tmd tcenter">Headings are capitalized by default.</p>
+            <p class="semi tmd tcenter">Headings are capitalized and aligned center by default.</p>
             <div class="tright contentWidth center">
                     <p>For lowercase add the class <code>"lowercase"</code></p>
                     <p>For uppercase, <code>"uppercase"</code></p>
@@ -45,7 +45,7 @@
 
         <!-- paragraphs -->
         <section>
-            <h2 class="tcenter">Here are some paragraphs</h2>
+            <h2>Here are some paragraphs</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laudantium aut beatae unde illum, eligendi officiis numquam itaque corporis labore consectetur quae aliquid modi ipsam veniam nemo veritatis perferendis error architecto fugit perspiciatis suscipit. At eum dolores harum commodi veniam, voluptatum eius nesciunt consequuntur modi cupiditate cumque odit laborum velit!</p>
                 <p>Here is an example of stupid long words without spaces. WHOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!</p>
                 <p>
@@ -92,6 +92,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- buttons -->
         <section class="tcenter">
             <h2>Buttons</h2>
             <p>Buttons and anchor tags are styled to look the same.</p>
@@ -108,7 +110,7 @@
             <p>Or in groups <code>"btns"</code></p>
 
             <!-- formatted code explaining button classes -->
-<code class="center">&lt;div class=&quot;btns&quot;&gt;&#13;&#10;    &lt;a&gt;button 1&lt;/a&gt;&#13;&#10;    &lt;a&gt;button 2&lt;/a&gt;&#13;&#10;    &lt;a&gt;button 3&lt;/a&gt;&#13;&#10;&lt;/div&gt;</code>
+<code>&lt;div class=&quot;btns&quot;&gt;&#13;&#10;    &lt;a&gt;button 1&lt;/a&gt;&#13;&#10;    &lt;a&gt;button 2&lt;/a&gt;&#13;&#10;    &lt;a&gt;button 3&lt;/a&gt;&#13;&#10;&lt;/div&gt;</code>
 
             <p>The code above would output this:</p>
 
@@ -120,10 +122,98 @@
                 </div>
             </div>
         </section>
+
+        <!-- navigation -->
+        <section>
+            <h2>navigation</h2>
+
+            <!-- standard -->
+            <section>
+                <h3>Standard Nav</h3>
+                <p class="tcenter">
+                    The standard nav without any classes is set to <code>display: flex</code>
+                    <br>It will disperse it's first children evenly using <code>justify-content: space-between</code>
+                </p>
+
+<!-- code snippet -->
+<code>&lt;nav class=&quot;primary&quot;&gt;&#13;&#10;    &lt;a&gt;link1&lt;/a&gt;&#13;&#10;    &lt;a&gt;link2&lt;/a&gt;&#13;&#10;    &lt;a&gt;link3&lt;/a&gt;&#13;&#10;&lt;/nav&gt;</code>
+
+                <p class="tcenter">Outputs</p>
+
+                <nav class="primary">
+                    <a>link1</a>
+                    <a>link2</a>
+                    <a>link3</a>
+                </nav>
+
+                <hr>
+
+                <p class="tcenter">
+                    If you want to cluster buttons, you can wrap button groups in divs with a class of <code>"flex"</code>
+                </p>
+
+<!-- code snippet -->
+<code>&lt;nav class=&quot;primary&quot;&gt;&#13;&#10;    &lt;a&gt;Home&lt;/a&gt;&#13;&#10;    &lt;div class=&quot;flex&quot;&gt;&#13;&#10;        &lt;a&gt;link1&lt;/a&gt;&#13;&#10;        &lt;a&gt;link2&lt;/a&gt;&#13;&#10;        &lt;a&gt;link3&lt;/a&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;&lt;/nav&gt;</code>
+
+                <p class="tcenter">Outputs</p>
+
+                <nav class="primary">
+                    <a>Home</a>
+                    <div class="flex">
+                        <a>link1</a>
+                        <a>link2</a>
+                        <a>link3</a>
+                    </div>
+                </nav>
+
+                <hr>
+
+                <p class="tcenter">
+                    Add a class of <code>"active"</code> to a link to show that you are currently on that page.
+                </p>
+
+                <nav class="primary">
+                    <a>link1</a>
+                    <a class="active">link2</a>
+                    <a>link3</a>
+                </nav>
+            </section>
+
+            <!-- collapsable -->
+            <section>
+                <h3>Collapsable Nav</h3>
+
+                <nav class="primary btns">
+                    <a>Home</a>
+
+                    <button class="collapseToggle">Menu</button>
+
+                    <div class="collapse">
+                        <a>link1</a>
+                        <a>link2</a>
+                        <a>link3</a>
+                    </div>
+                </nav>
+
+                <div class="nav primary btns">
+                    <a>Home</a>
+
+                    <button class="collapseToggle">Menu</button>
+
+                    <div class="collapse">
+                        <a>link1</a>
+                        <a>link2</a>
+                        <a>link3</a>
+                    </div>
+                </div>
+            </section>
+        </section>
     </main>
 
     <footer>
         <p>footer</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

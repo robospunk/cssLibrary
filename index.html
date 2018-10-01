@@ -8,15 +8,14 @@
     <title>CSS Library</title>
 </head>
 <body>
-    <header>
+    <header class="sidebarRight">
         <nav>
             <a href=""><h1 class="tlg">Dat Style Library</h1></a>
-            <div class="flex btns">
+            <button class="collapseToggle">Menu</button>
+            <div class="collapse flex btns">
                 <a href="">navLink 1</a>
                 <a href="">navLink 2</a>
                 <a href="">navLink 3</a>
-                <a href="">navLink 4</a>
-                <a href="">navLink 5</a>
             </div>
         </nav>
     </header>
@@ -183,7 +182,15 @@
             <section>
                 <h3>Collapsable Nav</h3>
 
-                <nav class="primary btns">
+                <p class="tcenter">
+                    To have a menu that collapses at small screen widths, wrap your links in a div with the class of <code>"collapse"</code> and make sure the nav contains a button with the class of <code>"collapseToggle"</code>
+                </p>
+
+<code>&lt;nav class=&quot;primary&quot;&gt;&#13;&#10;    &lt;a&gt;Home&lt;/a&gt;&#13;&#10;&#13;&#10;    &lt;button class=&quot;collapseToggle&quot;&gt;Menu&lt;/button&gt;&#13;&#10;&#13;&#10;    &lt;div class=&quot;collapse&quot;&gt;&#13;&#10;        &lt;a&gt;link1&lt;/a&gt;&#13;&#10;        &lt;a&gt;link2&lt;/a&gt;&#13;&#10;        &lt;a&gt;link3&lt;/a&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;&lt;/nav&gt;&#13;&#10;&#13;&#10;&lt;!-- OR --&gt;&#13;&#10;&#13;&#10;&lt;div class=&quot;nav primary btns&quot;&gt;&#13;&#10;    &lt;a&gt;Home&lt;/a&gt;&#13;&#10;&#13;&#10;    &lt;button class=&quot;collapseToggle&quot;&gt;Menu&lt;/button&gt;&#13;&#10;&#13;&#10;    &lt;div class=&quot;collapse&quot;&gt;&#13;&#10;        &lt;a&gt;link1&lt;/a&gt;&#13;&#10;        &lt;a&gt;link2&lt;/a&gt;&#13;&#10;        &lt;a&gt;link3&lt;/a&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;&lt;/div&gt;</code>
+
+                <p class="tcenter">Outputs</p>
+
+                <nav class="primary">
                     <a>Home</a>
 
                     <button class="collapseToggle">Menu</button>

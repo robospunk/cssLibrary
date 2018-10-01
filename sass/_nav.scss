@@ -78,12 +78,23 @@ nav,
             width: max-content;
         }
 
+        .active:after {
+            bottom: .25rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: currentColor;
+            height: 2px;
+            width: 80%;
+            border-radius: 1px;
+        }
+
         @include md {
             display: flex;
             flex-direction: row;
             flex-basis: auto;
             height: auto;
             transform: scale(1) !important;
+            overflow: visible;
         }
     }
 

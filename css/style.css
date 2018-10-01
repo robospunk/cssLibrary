@@ -19,7 +19,9 @@ nav .collapse, .nav .collapse { display: -webkit-box; display: -ms-flexbox; disp
 
 nav .collapse a, nav .collapse button, nav .collapse .navLink, .nav .collapse a, .nav .collapse button, .nav .collapse .navLink { width: -webkit-max-content; width: -moz-max-content; width: max-content; }
 
-@media (min-width: 780px) { nav .collapse, .nav .collapse { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-preferred-size: auto; flex-basis: auto; height: auto; -webkit-transform: scale(1) !important; transform: scale(1) !important; } }
+nav .collapse .active:after, .nav .collapse .active:after { bottom: .25rem; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); background: currentColor; height: 2px; width: 80%; border-radius: 1px; }
+
+@media (min-width: 780px) { nav .collapse, .nav .collapse { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-preferred-size: auto; flex-basis: auto; height: auto; -webkit-transform: scale(1) !important; transform: scale(1) !important; overflow: visible; } }
 
 @media (min-width: 780px) { nav .collapseToggle, .nav .collapseToggle { display: none; } }
 

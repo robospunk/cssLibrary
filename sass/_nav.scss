@@ -17,7 +17,8 @@
 }
 
 .btns {
-    a, button {
+    a, button,
+    .dropdown {
         display: inline-block;
         padding: .5rem 1rem;
         margin: .25rem;
@@ -53,9 +54,64 @@ nav,
 
     a,
     button,
-    .navLink {
+    .navLink,
+    .dropdown {
         padding: .5rem 1rem;
         margin: .25rem;
+    }
+
+    .dropdown {
+        position: relative;
+        
+        & > div {
+            position: absolute;
+            top: calc(100%);
+            left: 0;
+            visibility: hidden;
+            transform: scale(0);
+            transform-origin: top center;
+
+            a,
+            button,
+            .navLink {
+                display: block;
+            }
+        }
+
+        &:hover > div,
+        &:focus > div {
+            position: relative;
+            visibility: visible;
+            transform: scale(1);
+            
+            @include md {
+                position: absolute;
+            }
+        }
+
+        &:before {
+            content: "";
+            display: inline-block;
+            border: .5rem solid transparent;
+            border-top: .5rem solid currentColor;
+            margin: 0rem .5rem -.5rem -.5rem;
+        }
+    }
+
+    h1 {
+        font-size: 1.8rem;
+
+        @include md {
+            font-size: 2.2rem;
+        }
+
+        @include lg {
+            font-size: 3.25rem;
+        }
+    }
+
+    ul {
+        list-style: none;
     }
 
     // Collapse Nav
@@ -104,12 +160,12 @@ nav,
         }
     }
 
-    .collapseToggle:after {
+    .collapseToggle:before {
         content: "";
         display: inline-block;
         border: .5rem solid transparent;
         border-top: .5rem solid currentColor;
-        margin: 0rem -.5rem -.5rem .5rem;
+        margin: 0rem .5rem -.5rem -.5rem;
         // transform: rotate(180deg);
         // margin: -.5rem -.5rem 0rem .5rem;
     }
@@ -177,5 +233,25 @@ header.sidebarRight {
         & ~ #main {
             padding-right: 200px !important;
         }
+    }
+}
+
+// fixed header
+//
+// 
+
+header.fixed {
+    position: fixed;
+    width: 100%;
+
+    & ~ main,
+    & ~ #main,
+    & ~ main#main {
+        padding-top: 200px;
+    }
+
+    nav,
+    .nav {
+        margin-bottom: 0;
     }
 }

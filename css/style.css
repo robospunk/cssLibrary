@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600,700|Source+Code+Pro");
-nav, .nav, main#main, main, #main, code, .center { margin-left: auto !important; margin-right: auto !important; }
+nav, .nav, main#main, main, #main, code, figure, blockquote, .center { margin-left: auto !important; margin-right: auto !important; }
 
 .active { position: relative; }
 
@@ -27,7 +27,7 @@ nav .dropdown:hover > div, nav .dropdown:focus > div, .nav .dropdown:hover > div
 
 nav .dropdown:after, .nav .dropdown:after { content: ""; display: inline-block; border: .5rem solid transparent; border-top: .5rem solid currentColor; margin: 0rem -.5rem -.5rem .5rem; }
 
-nav h1, .nav h1 { font-size: 1.8rem; }
+nav h1, .nav h1 { font-size: 1.8rem; margin: 0; }
 
 @media (min-width: 780px) { nav h1, .nav h1 { font-size: 2.2rem; } }
 
@@ -76,7 +76,7 @@ header.fixed ~ main, header.fixed ~ #main, header.fixed ~ main#main { padding-to
 
 header.fixed nav, header.fixed .nav { margin-bottom: 0; }
 
-nav, .nav, main#main, main, #main, code, .center { margin-left: auto !important; margin-right: auto !important; }
+nav, .nav, main#main, main, #main, code, figure, blockquote, .center { margin-left: auto !important; margin-right: auto !important; }
 
 * { -webkit-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0; -webkit-transition: all 150ms ease-in-out; transition: all 150ms ease-in-out; overflow-wrap: break-word; }
 
@@ -104,6 +104,10 @@ h5 { font-size: 1.8rem; margin-bottom: 1.25rem; }
 
 h6 { font-size: 1.6rem; margin-bottom: 1rem; }
 
+header, footer { position: relative; z-index: 100; background: #b3ddff; }
+
+footer { padding: 1rem; }
+
 main#main, main, #main { max-width: 1200px; min-height: calc(100vh - 8rem); }
 
 section { padding: 2rem 1rem; border-bottom: 1px solid #007fe6; }
@@ -113,6 +117,24 @@ section:last-child { border-bottom: none; }
 section section { margin-top: 2rem; padding: 2rem .5rem; border: none; background: aliceblue; }
 
 section section section { padding: 2rem 0; }
+
+code { display: block; padding: 1rem; margin-bottom: 1rem; width: -webkit-max-content; width: -moz-max-content; width: max-content; max-width: 100%; border: 1px solid #80c6ff; background: aliceblue; border-radius: .25rem; font-size: 1rem; font-family: 'Source Code Pro', monospace; white-space: pre-wrap; text-align: left; }
+
+p code { display: inline; padding: 0 .25rem; }
+
+figure { max-width: -webkit-max-content; max-width: -moz-max-content; max-width: max-content; background: #b3ddff; }
+
+figcaption { padding: .5rem; }
+
+blockquote { position: relative; z-index: 90; padding: 2rem 1rem 1rem; white-space: pre-line; font-weight: 400; font-size: 1.3rem; max-width: 800px; -webkit-box-shadow: 43px 37px 0 -40px #b3ddff; box-shadow: 43px 37px 0 -40px #b3ddff; }
+
+@media (min-width: 780px) { blockquote { padding: 2rem 3rem 1rem; } }
+
+blockquote:before { content: "\275D"; position: absolute; z-index: -1; top: 0; left: 0; font-size: 5rem; color: #b3ddff; opacity: .5; }
+
+blockquote cite { display: block; margin-top: 1rem; font-weight: 400; font-style: italic; text-align: right; }
+
+blockquote cite:before { content: "- "; }
 
 p { margin-bottom: 1rem; line-height: 1.5; }
 
@@ -128,21 +150,19 @@ a:hover, button:hover, .dropdown:hover { -webkit-transform: scale(1.1); transfor
 
 a:active, button:active, .dropdown:active { -webkit-transform: scale(0.9); transform: scale(0.9); }
 
-code { display: block; padding: 1rem; margin-bottom: 1rem; width: -webkit-max-content; width: -moz-max-content; width: max-content; max-width: 100%; border: 1px solid #80c6ff; background: aliceblue; border-radius: .25rem; font-size: 1rem; font-family: 'Source Code Pro', monospace; white-space: pre-wrap; text-align: left; }
-
-p code { display: inline; padding: 0 .25rem; }
-
-header, footer { background: #b3ddff; }
-
-footer { padding: 1rem; }
-
 input, textarea, select { display: block; margin-top: .5rem; font-size: inherit; font-family: inherit; padding: .25rem; }
 
 hr { border: none; border-top: 1px solid #007fe6; margin: 1rem; }
 
 @media (min-width: 780px) { hr { margin: 2rem 1rem; } }
 
-nav, .nav, main#main, main, #main, code, .center { margin-left: auto !important; margin-right: auto !important; }
+img { max-width: 100%; max-height: 100%; }
+
+p img { float: left; margin: .5rem 1rem .5rem 0; }
+
+@media (min-width: 780px) { img { max-width: 400px; max-height: 400px; } }
+
+nav, .nav, main#main, main, #main, code, figure, blockquote, .center { margin-left: auto !important; margin-right: auto !important; }
 
 .tsm { font-size: .8rem; }
 

@@ -70,6 +70,20 @@ h6 {
     margin-bottom: 1rem;
 }
 
+
+// semantics
+// ============================================= //
+
+header, footer {
+    position: relative;
+    z-index: 100;
+    background: $primary;
+}
+
+footer {
+    padding: 1rem;
+}
+
 main#main,
 main,
 #main {
@@ -97,6 +111,80 @@ section {
         }
     }
 }
+
+code {
+    display: block;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    @extend %center;
+    width: max-content;
+    max-width: 100%;
+    border: 1px solid darken($primary, 10%);
+    background: lighten($primary, 12%);
+    border-radius: .25rem;
+    font-size: 1rem;
+    font-family: 'Source Code Pro', monospace;
+    white-space: pre-wrap;
+    text-align: left;
+
+    p & {
+        display: inline;
+        padding: 0 .25rem;
+    }
+}
+
+figure {
+    max-width: max-content;
+    @extend %center;
+    background: $primary;
+}
+
+figcaption {
+    padding: .5rem;
+}
+
+blockquote {
+    position: relative;
+    z-index: 90;
+    @extend %center;
+    padding: 2rem 1rem 1rem;
+    white-space: pre-line;
+    font-weight: 400;
+    font-size: 1.3rem;
+    max-width: 800px;
+    box-shadow: $quote;
+
+    @include md {
+        padding: 2rem 3rem 1rem;
+    }
+
+    &:before {
+        content: "\275D";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        font-size: 5rem;
+        color: $primary;
+        opacity: .5;
+    }
+
+    cite {
+        display: block;
+        margin-top: 1rem;
+        font-weight: 400;
+        font-style: italic;
+        text-align: right;
+    
+        &:before {
+            content: "- ";
+        }
+    }
+}
+
+
+// other common elements
+// ============================================= //
 
 p {
     // max-width: 800px;
@@ -134,35 +222,6 @@ a, button,
     }
 }
 
-code {
-    display: block;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    @extend %center;
-    width: max-content;
-    max-width: 100%;
-    border: 1px solid darken($primary, 10%);
-    background: lighten($primary, 12%);
-    border-radius: .25rem;
-    font-size: 1rem;
-    font-family: 'Source Code Pro', monospace;
-    white-space: pre-wrap;
-    text-align: left;
-
-    p & {
-        display: inline;
-        padding: 0 .25rem;
-    }
-}
-
-header, footer {
-    background: $primary;
-}
-
-footer {
-    padding: 1rem;
-}
-
 input, textarea, select {
     display: block;
     margin-top: .5rem;
@@ -178,5 +237,20 @@ hr {
 
     @include md {
         margin: 2rem 1rem;
+    }
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+
+    p & {
+        float: left;
+        margin: .5rem 1rem .5rem 0;
+    }
+
+    @include md {
+        max-width: 400px;
+        max-height: 400px;
     }
 }

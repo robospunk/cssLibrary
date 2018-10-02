@@ -112,6 +112,21 @@ nav,
 
     ul {
         list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        a, button {
+            display: block;
+            word-break: break-all;
+            word-break: break-word;
+        }
+
+        @include md {
+            justify-content: space-between;
+        }
     }
 
     // Collapse Nav

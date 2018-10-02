@@ -75,6 +75,7 @@ main,
 #main {
     max-width: $wrap;
     @extend %center;
+    min-height: calc(100vh - 8rem);
 }
 
 section {

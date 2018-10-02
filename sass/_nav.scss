@@ -89,12 +89,12 @@ nav,
             }
         }
 
-        &:before {
+        &:after {
             content: "";
             display: inline-block;
             border: .5rem solid transparent;
             border-top: .5rem solid currentColor;
-            margin: 0rem .5rem -.5rem -.5rem;
+            margin: 0rem -.5rem -.5rem .5rem;
         }
     }
 
@@ -160,12 +160,12 @@ nav,
         }
     }
 
-    .collapseToggle:before {
+    .collapseToggle:after {
         content: "";
         display: inline-block;
         border: .5rem solid transparent;
         border-top: .5rem solid currentColor;
-        margin: 0rem .5rem -.5rem -.5rem;
+        margin: 0rem -.5rem -.5rem .5rem;
         // transform: rotate(180deg);
         // margin: -.5rem -.5rem 0rem .5rem;
     }

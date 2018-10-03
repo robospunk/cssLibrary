@@ -22,34 +22,125 @@
 
     <main id="main">
         <!-- headings -->
-        <section>
-            <h2>Here are some headings</h2>
-            <div class="border contentWidth center">
-                <h1>heading 1</h1>
-                <h2>heading 2</h2>
-                <h3>heading 3</h3>
-                <h4>heading 4</h4>
-                <h5>heading 5</h5>
-                <h6>heading 6</h6>
-            </div>
+        <section id="text">
+            <h2>Text Styling</h2>
+            <!-- headings -->
+            <section>
+                <h3>Headings</h3>
+                <div class="border contentWidth center">
+                    <h1>heading 1</h1>
+                    <h2>heading 2</h2>
+                    <h3>heading 3</h3>
+                    <h4>heading 4</h4>
+                    <h5>heading 5</h5>
+                    <h6>heading 6</h6>
+                </div>
+    
+                <p class="semi tmd tcenter">Headings are capitalized and aligned center by default.</p>
+                <div class="tright contentWidth center">
+                        <p>For lowercase add the class <code>"lowercase"</code></p>
+                        <p>For uppercase, <code>"uppercase"</code></p>
+                        <p>To capitalize, <code>"capitalize"</code></p>
+                        <p>And to remove any text-transforming, add the class <code>"nocase"</code></p>
+                </div>
+            </section>
 
-            <p class="semi tmd tcenter">Headings are capitalized and aligned center by default.</p>
-            <div class="tright contentWidth center">
-                    <p>For lowercase add the class <code>"lowercase"</code></p>
-                    <p>For uppercase, <code>"uppercase"</code></p>
-                    <p>To capitalize, <code>"capitalize"</code></p>
-                    <p>And to remove any text-transforming, add the class <code>"nocase"</code></p>
-            </div>
-        </section>
+            <!-- paragraphs and alignments -->
+            <section>
+                <h3>Text Styling</h3>
 
-        <!-- paragraphs -->
-        <section>
-            <h2>Here are some paragraphs</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laudantium aut beatae unde illum, eligendi officiis numquam itaque corporis labore consectetur quae aliquid modi ipsam veniam nemo veritatis perferendis error architecto fugit perspiciatis suscipit. At eum dolores harum commodi veniam, voluptatum eius nesciunt consequuntur modi cupiditate cumque odit laborum velit!</p>
-                <p>Here is an example of stupid long words without spaces. WHOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!</p>
-                <p>
-                    Here are some <a href="">Links</a> within a <a href="">paragraph.</a> YEEEEEEEEEEEEEEEE. <a href="">link.</a>
-                </p>
+                <!-- alignment -->
+                <section>
+                    <h4>Alignment</h4>
+                    <p class="tcenter">If you'd like to change the default alignment, you can add these classes:</p>
+                    <div class="tleft border">
+                        <p>
+                            Add the class <code>"tleft"</code> to align left.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta iste deserunt ipsa enim. Repellendus, voluptatibus nihil nostrum minima quod sed!
+                        </p>
+                    </div>
+                    <div class="tcenter border">
+                        <p>
+                            Add the class <code>"tcenter"</code> to align center.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta iste deserunt ipsa enim. Repellendus, voluptatibus nihil nostrum minima quod sed!
+                        </p>
+                    </div>
+                    <div class="tright border">
+                        <p>
+                            Add the class <code>"tright"</code> to align right.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta iste deserunt ipsa enim. Repellendus, voluptatibus nihil nostrum minima quod sed!
+                        </p>
+                    </div>
+                    <div class="tjustify border">
+                        <p>
+                            Add the class <code>"tjustify"</code> to make each line space evenly from the left to right EXCEPT for the last line.
+                            Justify only starts working if you adding to something longer than one line.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci fugit corrupti ullam aut ex natus dolor dolore inventore consequatur, maiores assumenda perspiciatis voluptates possimus tenetur! Dolor distinctio beatae fugiat ea nesciunt doloribus reprehenderit, cupiditate ratione, amet consequatur vel, voluptates quisquam?
+                        </p>
+                    </div>
+                </section>
+
+                <!-- font-size -->
+                <section>
+                    <h4>Font size</h4>
+                    <p class="tcenter">
+                        If you'd like to change the default font size, you can add these classes:
+                    </p>
+                    <p class="tsm">
+                        Add the class <code>"tsm"</code> for small text.
+                    </p>
+                    <p class="treg">
+                        Add the class <code>"tsm"</code> for normal 1rem text.
+                    </p>
+                    <p class="tmd">
+                        Add the class <code>"tsm"</code> for medium text.
+                    </p>
+                    <p class="tlg">
+                        Add the class <code>"tsm"</code> for large text.
+                    </p>
+                    <p class="txl">
+                        Add the class <code>"tsm"</code> for extra large text.
+                    </p>
+                </section>
+
+                <!-- font-weight -->
+                <section>
+                    <h4>Font weight and decoration</h4>
+                    <p class="tcenter">
+                        If you'd like to change the weight or decoration, use these clases:
+                    </p>
+                    <p class="wlight">
+                        Add the class <code>"wlight"</code> for light weight text.
+                    </p>
+                    <p class="wreg">
+                        Add the class <code>"tsm"</code> for normal weight text.
+                    </p>
+                    <p class="semi">
+                        Add the class <code>"tsm"</code> for semi-bold text.
+                    </p>
+                    <p class="bold">
+                        Add the class <code>"tsm"</code> for bold text.
+                    </p>
+                    <p class="italic">
+                        Add the class <code>"tsm"</code> for italicized text.
+                    </p>
+                    <p class="underline">
+                        Add the class <code>"tsm"</code> for underlined text.
+                    </p>
+
+                    <p class="tcenter">
+                        If you 
+                    </p>
+                </section>
+            </section>
         </section>
 
         <!-- semantic elements -->
@@ -108,6 +199,19 @@
             </div>
         </section>
 
+        <!-- colors -->
+        <section>
+            <h2>Colors</h2>
+        
+            <div class="pad primary m1"></div>
+        
+            <div class="pad accent m1"></div>
+        
+            <div class="pad success m1"></div>
+        
+            <div class="pad danger m1"></div>
+        </section>
+
         <!-- buttons -->
         <section class="tcenter">
             <h2>Buttons</h2>
@@ -129,11 +233,27 @@
 
             <p>The code above would output this:</p>
 
-            <div class="flex column border contentWidth center">
+            <div class="flex border contentWidth center">
                 <div class="btns">
                     <a>button 1</a>
                     <a>button 2</a>
                     <a>button 3</a>
+                </div>
+            </div>
+
+            <hr>
+
+            <p class="tcenter">
+                By default, the class <code>"btn"</code> makes the button have a primary background color.
+                <br>
+                Here are a few other options:
+            </p>
+
+            <div class="flex border contentWidth center">
+                <div>
+                    <a class="btn">class of "btn"</a>
+                    <a class="btn success">class of "btn success"</a>
+                    <a class="btn danger">class of "btn danger"</a>
                 </div>
             </div>
         </section>

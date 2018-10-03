@@ -33,8 +33,20 @@
     padding: .5rem 1rem;
     margin: .25rem;
     background: darken($primary, 40%);
-    color: lighten($primary, 40%);
+    color: white;
     border-radius: .25rem;
+
+    &.accent {
+        background: darken($accent, 45%);
+    }
+
+    &.success {
+        background: darken($success, 45%);
+    }
+
+    &.danger {
+        background: darken($danger, 40%);
+    }
 }
 
 nav,
@@ -104,10 +116,6 @@ nav,
 
         @include md {
             font-size: 2.2rem;
-        }
-
-        @include lg {
-            font-size: 3.25rem;
         }
     }
 

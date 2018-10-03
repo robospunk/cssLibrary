@@ -6,8 +6,6 @@
 
 // callout boxes like in magazines
 
-// quotes
-
 
 // font sizes
 // ============================================= //
@@ -34,6 +32,8 @@
 
 .italic {font-style: italic;}
 
+.underline {text-decoration: underline;}
+
 
 // text alignment
 // ============================================= //
@@ -44,8 +44,6 @@
 .tleft {text-align: left;}
 
 .tjustify {text-align: justify;}
-
-.tjustifyAll {text-align: justify-all;}
 
 
 // text transform
@@ -91,12 +89,42 @@
     margin: .5rem;
 }
 
+.m2 {
+    margin: 1rem;
+}
+
+.m3 {
+    margin: 3rem;
+}
+
+.pad {
+    padding: 1rem;
+
+    @include md {
+        padding: 2rem;
+    }
+}
+
 
 // colors
 // ============================================= //
 .primary {
     background-color: $primary;
 }
+
+.accent {
+    background-color: $accent;
+}
+
+.success {
+    background-color: $success;
+}
+
+.danger {
+    background-color: $danger;
+}
+
+
 
 .flex {
     display: flex;
@@ -126,11 +154,4 @@
     }
 }
 
-.pad {
-    padding: 1rem;
-
-    @include md {
-        padding: 2rem;
-    }
-}
 

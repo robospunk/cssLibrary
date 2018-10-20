@@ -8,14 +8,38 @@
     <title>CSS Library</title>
 </head>
 <body>
-    <header class="fixed">
-        <nav>
+    <header>
+        <nav class="fixed primary">
             <a href=""><h1>Dat Style Library</h1></a>
             <button class="collapseToggle">Menu</button>
             <div class="collapse flex btns">
                 <a href="sandbox.html" target="_blank">My Sandbox</a>
                 <a href="index.html#semantic">Semantic Tags</a>
-                <a href="">navLink 3</a>            
+                <a href="">navLink 3</a>
+                <div class="dropdown">
+                    <button>Dropdown</button>
+                    <ul>
+                        <li><a href="">Link1</a></li>
+                        <li><a href="">Link2</a></li>
+                        <li><a href="">Link3</a></li>
+                        <div class="dropdown">
+                            <button>Another</button>
+                            <ul>
+                                <li><a href="">linky</a></li>
+                                <li><a href="">slinky</a></li>
+                                <li><a href="">binky</a></li>
+                                <div class="dropdown">
+                                    <button>Droppy</button>
+                                    <ul>
+                                        <li><a href="">nother</a></li>
+                                        <li><a href="">bother</a></li>
+                                        <li><a href="">fother</a></li>
+                                    </ul>
+                                </div>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
@@ -134,10 +158,6 @@
                     </p>
                     <p class="underline">
                         Add the class <code>"tsm"</code> for underlined text.
-                    </p>
-
-                    <p class="tcenter">
-                        If you 
                     </p>
                 </section>
             </section>

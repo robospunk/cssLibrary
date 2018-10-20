@@ -10,20 +10,19 @@
         left: 0;
         width: 100%;
         height: 4px;
-        background: darken($primary, 40%);
+        background: $darkPrimary;
         border-radius: 2px;
         display: block;
     }
 }
 
 .btns {
-    a, button,
-    .dropdown {
+    a, button {
         display: inline-block;
         padding: .5rem 1rem;
         margin: .25rem;
-        background: darken($primary, 40%);
-        color: lighten($primary, 40%);
+        background: $darkPrimary;
+        color: white;
         border-radius: .25rem;
     }
 }
@@ -32,7 +31,7 @@
     display: inline-block;
     padding: .5rem 1rem;
     margin: .25rem;
-    background: darken($primary, 40%);
+    background: $darkPrimary;
     color: white;
     border-radius: .25rem;
 
@@ -51,16 +50,20 @@
 
 nav,
 .nav {
+    position: relative;
+    z-index: 90;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    max-width: $wrap;
-    @extend %center;
     padding: 1rem;
     margin-bottom: 1rem;
 
     @include md {
+        justify-content: space-evenly;
+    }
+
+    @include lg {
         justify-content: space-between;
     }
 
@@ -73,40 +76,73 @@ nav,
     }
 
     .dropdown {
-        position: relative;
+        // position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: min-content;
+        margin: 0;
+        padding: 0;
         
-        & > div {
-            position: absolute;
-            top: calc(100%);
-            left: 0;
-            visibility: hidden;
-            transform: scale(0);
-            transform-origin: top center;
-
-            a,
-            button,
-            .navLink {
-                display: block;
-            }
+        a,
+        button,
+        .navLink {
+            display: block;
         }
 
-        &:hover > div,
-        &:focus > div {
+        button {
             position: relative;
-            visibility: visible;
-            transform: scale(1);
-            
-            @include md {
-                position: absolute;
+            z-index: 10;
+        }
+
+        ul {
+            position: absolute;
+            z-index: 20;
+            top: calc(100% - .25rem);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: min-content;
+            padding: .5rem;
+            background: white;
+            border: 2px solid $darkPrimary;
+            border-radius: .25rem;
+            visibility: hidden;
+            // overflow-y: scroll;
+            // overflow-x: hidden;
+            transition: $transition;
+            transform-origin: top center;
+            opacity: 0;
+            transform: scale(0);
+
+            .dropdown ul {
+                top: -2px;
             }
         }
 
-        &:after {
+        button:hover ~ ul,
+        button ~ ul:hover,
+        button:focus-within ~ ul,
+        button ~ ul:focus-within {
+            visibility: visible;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        button:after {
             content: "";
             display: inline-block;
             border: .5rem solid transparent;
-            border-top: .5rem solid currentColor;
-            margin: 0rem -.5rem -.5rem .5rem;
+            border-right: .5rem solid currentColor;
+            margin: 0 -.5rem -.25rem 0;
+        }
+
+        button:hover:after,
+        button:focus:after {
+            content: "";
+            transform: rotate(-90deg);
+            transition: $transition;
+            transform-origin: 75% center;
         }
     }
 
@@ -139,14 +175,13 @@ nav,
     }
 
     // Collapse Nav
-    //
-    //
+    // ============================================= //
 
     .collapse {
         display: flex;
         flex-direction: column;
         align-items: center;
-        overflow: hidden;
+        // overflow: hidden;
         height: 0;
         transform: scale(0);
         transform-origin: top center;
@@ -188,11 +223,15 @@ nav,
         content: "";
         display: inline-block;
         border: .5rem solid transparent;
-        border-top: .5rem solid currentColor;
-        margin: 0rem -.5rem -.5rem .5rem;
-        // transform: rotate(180deg);
-        // margin: -.5rem -.5rem 0rem .5rem;
+        border-right: .5rem solid currentColor;
+        margin: 0 -.5rem -.25rem 0;
     }
+        .collapseToggle:focus:after {
+            content: "";
+            transform: rotate(-90deg);
+            transition: $transition;
+            transform-origin: 75% center;
+        }
 }
 
 .expand {
@@ -206,15 +245,19 @@ nav,
 }
 
 // sidebar header
-// 
-// 
+// ============================================= //
 
-header.sidebar,
-header.sidebarRight {
+
+.sidebar,
+.sidebarRight {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    
     @include md {
         position: fixed;
         top: 0;
-        width: min-content;
+        // width: min-content;
         max-width: 200px;
         height: 100%;
 
@@ -236,7 +279,7 @@ header.sidebarRight {
     }
 }
 
-header.sidebar {
+.sidebar {
     left: 0;
 
     @include md {
@@ -248,7 +291,7 @@ header.sidebar {
     }
 }
 
-header.sidebarRight {
+.sidebarRight {
    right: 0;
 
    @include md {
@@ -261,21 +304,17 @@ header.sidebarRight {
 }
 
 // fixed header
-//
-// 
+// ============================================= //
 
-header.fixed {
+.fixed {
     position: fixed;
+    z-index: 100;
     width: 100%;
+    top: 0;
 
-    & ~ main,
-    & ~ #main,
-    & ~ main#main {
-        padding-top: 200px;
-    }
+}
 
-    nav,
-    .nav {
-        margin-bottom: 0;
-    }
+.fixedPadding {
+    display: block;
+    width: 100%;
 }

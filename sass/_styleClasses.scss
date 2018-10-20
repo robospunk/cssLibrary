@@ -143,7 +143,7 @@
 }
 
 .border {
-    border: 2px solid darken($primary, 40%);
+    border: 2px solid $darkPrimary;
     border-radius: .25rem;
     padding: 1rem;
     margin-bottom: 1rem;
@@ -154,4 +154,7 @@
     }
 }
 
-
+.wrap {
+    max-width: $wrap;
+    @extend %center;
+}

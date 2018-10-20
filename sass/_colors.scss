@@ -2,6 +2,12 @@
 
 $primary: #b3e7ff;
 
+$lightPrimary: lighten($primary, 12%);
+
+$darkPrimary: darken($primary, 40%);
+
+$darkerPrimary: darken($primary, 60%);
+
 $accent: complement($primary);
 
 $secondary: #83cfda;

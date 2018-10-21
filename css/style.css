@@ -122,13 +122,13 @@ footer { padding: 1rem; }
 
 main#main, main, #main { max-width: 1200px; min-height: calc(100vh - 8rem); }
 
-section { padding: 2rem 1rem; border-bottom: 1px solid #009de6; }
+section, article { padding: 2rem 1rem; border-bottom: 1px solid #009de6; }
 
-section:last-child { border-bottom: none; }
+section:last-child, article:last-child { border-bottom: none; }
 
-section section { margin-top: 2rem; padding: 2rem .5rem; border: none; background: #f0faff; }
+section section, section article, article section, article article { margin-top: 2rem; padding: 2rem .5rem; border: none; background: #f0faff; }
 
-section section section { padding: 2rem 0; }
+section section section, section section article, section article section, section article article, article section section, article section article, article article section, article article article { padding: 2rem 0; }
 
 code { display: block; padding: 1rem; margin-bottom: 1rem; width: -webkit-max-content; width: -moz-max-content; width: max-content; max-width: 100%; border: 1px solid #009de6; background: #f0faff; border-radius: .25rem; font-size: 1rem; font-weight: 400; font-style: normal; font-family: 'Source Code Pro', monospace; white-space: pre-wrap; text-align: left; }
 
@@ -171,6 +171,40 @@ img { max-width: 100%; max-height: 100%; }
 p img:nth-of-type(odd) { float: left; margin: .5rem 1rem .5rem 0; }
 
 p img:nth-of-type(even) { float: right; margin: .5rem 0 .5rem 1rem; }
+
+img.xsm { width: 100px; max-width: 100%; max-height: 100px; }
+
+img.xsm.square { height: 100px; -o-object-fit: cover; object-fit: cover; }
+
+img.xsm.circle { height: 100px; -o-object-fit: cover; object-fit: cover; border-radius: 50%; }
+
+img.sm { width: 250px; max-width: 100%; max-height: 250px; }
+
+img.sm.square { height: 250px; -o-object-fit: cover; object-fit: cover; }
+
+img.sm.circle { height: 250px; -o-object-fit: cover; object-fit: cover; border-radius: 50%; }
+
+img.md { width: 400px; max-width: 100%; max-height: 400px; }
+
+img.md.square { height: 400px; -o-object-fit: cover; object-fit: cover; }
+
+img.md.circle { height: 400px; -o-object-fit: cover; object-fit: cover; border-radius: 50%; }
+
+img.lg { width: 600px; max-width: 100%; max-height: 600px; }
+
+img.lg.square { height: 600px; -o-object-fit: cover; object-fit: cover; }
+
+img.lg.circle { height: 600px; -o-object-fit: cover; object-fit: cover; border-radius: 50%; }
+
+img.max { max-width: 100%; max-height: 100vh; }
+
+img.hero { display: block; height: 250px; max-height: 100%; width: 100%; max-width: 100%; -o-object-fit: cover; object-fit: cover; }
+
+img.heroLg { display: block; height: 500px; max-height: 100%; width: 100%; max-width: 100%; -o-object-fit: cover; object-fit: cover; }
+
+img.heroFull { position: relative; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); display: block; height: 250px; max-height: 100%; width: 100vw; max-width: 100vw; -o-object-fit: cover; object-fit: cover; }
+
+img.heroLgFull { position: relative; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); display: block; height: 500px; max-height: 100%; width: 100vw; max-width: 100vw; -o-object-fit: cover; object-fit: cover; }
 
 @media (min-width: 780px) { img { max-width: 400px; max-height: 400px; } }
 

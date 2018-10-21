@@ -15,7 +15,7 @@
             <div class="collapse flex btns">
                 <a href="sandbox.html" target="_blank">My Sandbox</a>
                 <a href="index.html#semantic">Semantic Tags</a>
-                <a href="">navLink 3</a>
+                <a href="index.html#grid">Grid</a>
                 <div class="dropdown">
                     <button>Dropdown</button>
                     <ul>
@@ -370,6 +370,75 @@
                     </div>
                 </div>
             </section>
+        </section>
+
+        <!-- Grid -->
+        <section id="grid">
+            <h3>Grid</h3>
+            <section>
+                <p>The grid is flex based and uses 10 columns. Screens with a width 580px or smaller will ignore grid rules.</p>
+                
+                <p>To start a grid, make a div with a class of <code>"row"</code></p>
+                
+                <p>The direct children of this div will be affected by grid rules. By default, children of <code>"row"</code> will
+                    distribute space horizontally and evenly if space allows for it. If there is not enough space, chidlren will wrap
+                    to the next line.</p>
+                
+<!-- code snippet -->
+<code>&lt;div class=&quot;row&quot;&gt;&#13;&#10;    &lt;div class=&quot;border&quot;&gt;1&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border&quot;&gt;2&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border&quot;&gt;3&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border&quot;&gt;4&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border&quot;&gt;5&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border&quot;&gt;6&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border&quot;&gt;7&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border&quot;&gt;8&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border&quot;&gt;9&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border&quot;&gt;10&lt;/div&gt;&#13;&#10;&lt;/div&gt;</code>
+                
+                <p class="tcenter">Outputs</p>
+                
+                <div class="row">
+                    <div class="border">1</div>
+                    <div class="border">2</div>
+                    <div class="border">3</div>
+                    <div class="border">4</div>
+                    <div class="border">5</div>
+                    <div class="border">6</div>
+                    <div class="border">7</div>
+                    <div class="border">8</div>
+                    <div class="border">9</div>
+                    <div class="border">10</div>
+                </div>
+            </section>
+        </section>
+        
+        <section>
+            <p>To change the column width, add one of the following classes to the direct child of <code>"row"</code>:</p>
+            <p>
+                <code>"col10"</code>
+                <code>"col20"</code>
+                <code>"col30"</code>
+                <code>"col40"</code>
+                <code>"col50"</code>
+                <code>"col60"</code>
+                <code>"col70"</code>
+                <code>"col80"</code>
+                <code>"col90"</code>
+                <code>"col100"</code>
+            </p>
+
+            <p>The number of each class is associated with the percentage of space it will take up, if there is enough space.</p>
+
+<code>&lt;div class=&quot;row&quot;&gt;&#13;&#10;    &lt;div class=&quot;border col10&quot;&gt;col10&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col90&quot;&gt;col90&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col20&quot;&gt;col20&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col80&quot;&gt;col80&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col30&quot;&gt;col30&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col70&quot;&gt;col70&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col40&quot;&gt;col40&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col60&quot;&gt;col60&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col50&quot;&gt;col50&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col50&quot;&gt;col50&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col100&quot;&gt;col100&lt;/div&gt;&#13;&#10;&lt;/div&gt;</code>
+
+            <p class="tcenter">Outputs</p>
+
+            <div class="row">
+                <div class="border col10">col10</div>
+                <div class="border col90">col90</div>
+                <div class="border col20">col20</div>
+                <div class="border col80">col80</div>
+                <div class="border col30">col30</div>
+                <div class="border col70">col70</div>
+                <div class="border col40">col40</div>
+                <div class="border col60">col60</div>
+                <div class="border col50">col50</div>
+                <div class="border col50">col50</div>
+                <div class="border col100">col100</div>
+            </div>
+
         </section>
     </main>
 

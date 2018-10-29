@@ -1,4 +1,5 @@
 // Collapsable Nav
+// modals
 // ======================================
 // 
 let navs = document.querySelectorAll('nav, .nav');
@@ -10,6 +11,23 @@ document.addEventListener('scroll', listenForScroll);
 function listenForClicks(e) {
     if (e.target.classList.contains('collapseToggle')) {
         e.target.parentNode.querySelector('.collapse').classList.toggle('expand');
+    }
+
+    // modals
+    if (e.target.classList.contains('modalBtn')) {
+        let modalBtn = e.target;
+        modalBtn.nextElementSibling.classList.toggle('showModal');
+
+        if (modalBtn.nextElementSibling.classList.contains('showModal')) {
+            let blackOut = document.createElement('div');
+            let parent = modalBtn.parentNode;
+            blackOut.classList.add('blackOut');
+            parent.insertBefore(blackOut, modalBtn.nextElementSibling);
+        }
+    } else if (e.target.classList.contains('blackOut')) {
+        let parent = e.target.parentNode;
+        e.target.nextElementSibling.classList.toggle('showModal');
+        parent.removeChild(e.target);
     }
 }
 

@@ -318,3 +318,39 @@ nav,
     display: block;
     width: 100%;
 }
+
+// Modals
+// ============================================= //
+
+.modal {
+    position: fixed;
+    z-index: 110;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-22.5%);
+    width: calc(100% - 4rem);
+    max-width: 1000px;
+    max-height: calc(100% - 4rem);
+    padding: 1rem;
+    border-radius: .25rem;
+    background: white;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showModal {
+    visibility: visible;
+    opacity: 1;
+}
+
+.blackOut {
+    position: fixed;
+    z-index: 105;
+    top: -5rem;
+    left: -5rem;
+    height: 150vh;
+    width: 150vw;
+    background: black;
+    opacity: .5;
+}

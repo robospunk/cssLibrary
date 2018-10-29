@@ -45,7 +45,7 @@
     </header>
 
     <main id="main">
-        <!-- headings -->
+        <!-- text -->
         <section id="text">
             <h2>Text Styling</h2>
             <!-- headings -->
@@ -122,16 +122,16 @@
                         Add the class <code>"tsm"</code> for small text.
                     </p>
                     <p class="treg">
-                        Add the class <code>"tsm"</code> for normal 1rem text.
+                        Add the class <code>"treg"</code> for normal 1rem text.
                     </p>
                     <p class="tmd">
-                        Add the class <code>"tsm"</code> for medium text.
+                        Add the class <code>"tmd"</code> for medium text.
                     </p>
                     <p class="tlg">
-                        Add the class <code>"tsm"</code> for large text.
+                        Add the class <code>"tlg"</code> for large text.
                     </p>
                     <p class="txl">
-                        Add the class <code>"tsm"</code> for extra large text.
+                        Add the class <code>"txl"</code> for extra large text.
                     </p>
                 </section>
 
@@ -145,19 +145,19 @@
                         Add the class <code>"wlight"</code> for light weight text.
                     </p>
                     <p class="wreg">
-                        Add the class <code>"tsm"</code> for normal weight text.
+                        Add the class <code>"wreg"</code> for normal weight text.
                     </p>
                     <p class="semi">
-                        Add the class <code>"tsm"</code> for semi-bold text.
+                        Add the class <code>"semi"</code> for semi-bold text.
                     </p>
                     <p class="bold">
-                        Add the class <code>"tsm"</code> for bold text.
+                        Add the class <code>"bold"</code> for bold text.
                     </p>
                     <p class="italic">
-                        Add the class <code>"tsm"</code> for italicized text.
+                        Add the class <code>"italic"</code> for italicized text.
                     </p>
                     <p class="underline">
-                        Add the class <code>"tsm"</code> for underlined text.
+                        Add the class <code>"underline"</code> for underlined text.
                     </p>
                 </section>
             </section>
@@ -402,48 +402,163 @@
                     <div class="border">10</div>
                 </div>
             </section>
+
+            <section>
+                <p>To change the column width, add one of the following classes to the direct child of <code>"row"</code>:</p>
+                <p>
+                    <code>"col10"</code>
+                    <code>"col20"</code>
+                    <code>"col30"</code>
+                    <code>"col40"</code>
+                    <code>"col50"</code>
+                    <code>"col60"</code>
+                    <code>"col70"</code>
+                    <code>"col80"</code>
+                    <code>"col90"</code>
+                    <code>"col100"</code>
+                </p>
+            
+                <p>The number of each class is associated with the percentage of space it will take up, if there is enough space.</p>
+            
+                <code>&lt;div class=&quot;row&quot;&gt;&#13;&#10;    &lt;div class=&quot;border col10&quot;&gt;col10&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col90&quot;&gt;col90&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col20&quot;&gt;col20&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col80&quot;&gt;col80&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col30&quot;&gt;col30&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col70&quot;&gt;col70&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col40&quot;&gt;col40&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col60&quot;&gt;col60&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col50&quot;&gt;col50&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col50&quot;&gt;col50&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col100&quot;&gt;col100&lt;/div&gt;&#13;&#10;&lt;/div&gt;</code>
+            
+                <p class="tcenter">Outputs</p>
+            
+                <div class="row">
+                    <div class="border col10">col10</div>
+                    <div class="border col90">col90</div>
+                    <div class="border col20">col20</div>
+                    <div class="border col80">col80</div>
+                    <div class="border col30">col30</div>
+                    <div class="border col70">col70</div>
+                    <div class="border col40">col40</div>
+                    <div class="border col60">col60</div>
+                    <div class="border col50">col50</div>
+                    <div class="border col50">col50</div>
+                    <div class="border col100">col100</div>
+                </div>
+            
+            </section>
         </section>
-        
-        <section>
-            <p>To change the column width, add one of the following classes to the direct child of <code>"row"</code>:</p>
-            <p>
-                <code>"col10"</code>
-                <code>"col20"</code>
-                <code>"col30"</code>
-                <code>"col40"</code>
-                <code>"col50"</code>
-                <code>"col60"</code>
-                <code>"col70"</code>
-                <code>"col80"</code>
-                <code>"col90"</code>
-                <code>"col100"</code>
-            </p>
 
-            <p>The number of each class is associated with the percentage of space it will take up, if there is enough space.</p>
+        <!-- modals -->
+        <section id="modals">
+            <h3>Modals</h3>
+            <button class="modalBtn btn">Modal</button>
+            <div class="modal">
+                <p class="txl tcenter">
+                    Hey there. I'm a modal.
+                    <br>
+                    Click outside the box to exit.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat eligendi expedita molestiae nam delectus natus, ex, laborum commodi incidunt reiciendis reprehenderit modi mollitia molestias consequatur consequuntur quas quisquam amet! Ad omnis fugiat officiis nulla harum reiciendis corrupti, dolor rem quas eaque facere maiores quos blanditiis dolorem beatae, consectetur aperiam! Aspernatur?
+                </p>
+            </div>
 
-<code>&lt;div class=&quot;row&quot;&gt;&#13;&#10;    &lt;div class=&quot;border col10&quot;&gt;col10&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col90&quot;&gt;col90&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col20&quot;&gt;col20&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col80&quot;&gt;col80&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col30&quot;&gt;col30&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col70&quot;&gt;col70&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col40&quot;&gt;col40&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col60&quot;&gt;col60&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col50&quot;&gt;col50&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col50&quot;&gt;col50&lt;/div&gt;&#13;&#10;    &lt;div class=&quot;border col100&quot;&gt;col100&lt;/div&gt;&#13;&#10;&lt;/div&gt;</code>
+            <p>Making a modal is simple.</p>
+            <p>First, make a button with the class of <code>"modalBtn"</code>, then put a div after it with a class of <code>"modal"</code>. This div will only be visible when you press the button before it.</p>
+
+            <!-- code snippet -->
+<code>&lt;button class=&quot;modalBtn btn&quot;&gt;Example Modal&lt;/button&gt;&#13;&#10;&lt;div class=&quot;modal&quot;&gt;&#13;&#10;    &lt;p class=&quot;tlg&quot;&gt;&#13;&#10;        Do you like this example?&#13;&#10;    &lt;/p&gt;&#13;&#10;&lt;/div&gt;</code>
 
             <p class="tcenter">Outputs</p>
 
-            <div class="row">
-                <div class="border col10">col10</div>
-                <div class="border col90">col90</div>
-                <div class="border col20">col20</div>
-                <div class="border col80">col80</div>
-                <div class="border col30">col30</div>
-                <div class="border col70">col70</div>
-                <div class="border col40">col40</div>
-                <div class="border col60">col60</div>
-                <div class="border col50">col50</div>
-                <div class="border col50">col50</div>
-                <div class="border col100">col100</div>
+            <button class="modalBtn btn">Example Modal</button>
+            <div class="modal">
+                <p class="tlg">
+                    Do you like this example?
+                </p>
             </div>
+        </section>
 
+        <!-- forms -->
+        <section id="forms">
+            <h3>Forms</h3>
+
+            <form action="">
+                <label>Button Input</label>
+                <input type="button" value="button">
+
+                <div class="check">
+                    <input type="checkbox" name="example">
+                    <label>Checkbox Input</label>
+                </div>
+                <div class="check">
+                    <input type="checkbox" name="example">
+                    <label>Checkbox Input</label>
+                </div>
+                <div class="check">
+                    <input type="checkbox" name="example">
+                    <label>Checkbox Input</label>
+                </div>
+
+                <label>Color Input</label>
+                <input type="color">
+
+                <label>Date Input</label>
+                <input type="date">
+
+                <label>Email Input</label>
+                <input type="email">
+
+                <label>File Input</label>
+                <input type="file">
+
+                <label>Month Input</label>
+                <input type="month">
+
+                <label>Number Input</label>
+                <input type="number">
+
+                <label>Password Input</label>
+                <input type="password">
+
+                <div class="radio">
+                    <input type="radio" name="radioExample">
+                    <label>radio Input</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="radioExample">
+                    <label>radio Input</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="radioExample">
+                    <label>radio Input</label>
+                </div>
+
+                <label>Range Input</label>
+                <input type="range">
+
+                <label>Reset Input</label>
+                <input type="reset" value="reset">
+
+                <label>Search Input</label>
+                <input type="search">
+
+                <label>Submit Input</label>
+                <input type="submit" value="submit">
+
+                <label>Tel Input</label>
+                <input type="tel">
+
+                <label>Text Input</label>
+                <input type="text">
+
+                <label>Time Input</label>
+                <input type="time">
+
+                <label>URL Input</label>
+                <input type="url">
+
+                <label>Week Input</label>
+                <input type="week">
+            </form>
         </section>
     </main>
 
     <footer>
-        <a href="https://github.com/robospunk/cssLibrary" target="_blank">Get it on Github</a>
+        <div class="flex">
+            <a class="btn" href="https://github.com/robospunk/cssLibrary" target="_blank">Get it on Github</a>
+        </div>
     </footer>
 
     <script src="js/script.js"></script>

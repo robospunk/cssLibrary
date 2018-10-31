@@ -16,6 +16,8 @@
                 <a href="sandbox.html" target="_blank">My Sandbox</a>
                 <a href="index.html#semantic">Semantic Tags</a>
                 <a href="index.html#grid">Grid</a>
+                <a href="index.html#modals">Modals</a>
+                <a href="index.html#forms">Forms</a>
                 <div class="dropdown">
                     <button>Dropdown</button>
                     <ul>
@@ -225,6 +227,8 @@
         
             <div class="pad primary m1"></div>
         
+            <div class="pad invert m1"></div>
+
             <div class="pad accent m1"></div>
         
             <div class="pad success m1"></div>
@@ -475,82 +479,268 @@
             <h3>Forms</h3>
 
             <form action="">
-                <label>Button Input</label>
-                <input type="button" value="button">
+                <fieldset>
+                    <h4>This is a fieldset</h4>
+                    <p class="tcenter">
+                        Wrap fields in a fieldset tag to group them together, like this.
+                    </p>
 
-                <div class="check">
-                    <input type="checkbox" name="example">
-                    <label>Checkbox Input</label>
-                </div>
-                <div class="check">
-                    <input type="checkbox" name="example">
-                    <label>Checkbox Input</label>
-                </div>
-                <div class="check">
-                    <input type="checkbox" name="example">
-                    <label>Checkbox Input</label>
-                </div>
+                    <label>Email</label>
+                    <input type="email">
 
-                <label>Color Input</label>
-                <input type="color">
+                    <label>Message</label>
+                    <textarea></textarea>
 
-                <label>Date Input</label>
-                <input type="date">
+                    <input type="submit" value="submit">
+                </fieldset>
 
-                <label>Email Input</label>
-                <input type="email">
+                <fieldset>
+                    <legend>This a legend</legend>
+                    <p class="tcenter">You can wrap text in legend tags to add a title to a fieldset. A legend must be placed inside a fieldset.</p>
+                    <p class="tcenter">
+                        The default font-size of a legend is 1.6rem, but you can use style classes to change size as well as putting a h1-h6 tag within a legend.
+                    </p>
+                
+                    <label>Email</label>
+                    <input type="email">
+                
+                    <label>Message</label>
+                    <textarea></textarea>
+                
+                    <input type="submit" value="submit">
+                </fieldset>
 
-                <label>File Input</label>
-                <input type="file">
+                <fieldset>
+                    <legend>Notes</legend>
 
-                <label>Month Input</label>
-                <input type="month">
+                    <div class="note">
+                        <p>This is a note</p>
+                    </div>
 
-                <label>Number Input</label>
-                <input type="number">
+                    <p class="tcenter">
+                        You can add a note by adding the class <code>"note"</code> to a div, paragraph or h1-h6.
+                    </p>
 
-                <label>Password Input</label>
-                <input type="password">
+                    <p class="tcenter">
+                        Notes are aligned right by default. To put one on the left, use the class <code>"noteLeft"</code> instead.
+                    </p>
 
-                <div class="radio">
-                    <input type="radio" name="radioExample">
-                    <label>radio Input</label>
-                </div>
-                <div class="radio">
-                    <input type="radio" name="radioExample">
-                    <label>radio Input</label>
-                </div>
-                <div class="radio">
-                    <input type="radio" name="radioExample">
-                    <label>radio Input</label>
-                </div>
+                    <p class="note">This is a paragraph</p>
 
-                <label>Range Input</label>
-                <input type="range">
+                    <h4 class="note">This is an h4</h4>
 
-                <label>Reset Input</label>
-                <input type="reset" value="reset">
+                    <p class="noteLeft">This note is on the left</p>
 
-                <label>Search Input</label>
-                <input type="search">
+                </fieldset>
 
-                <label>Submit Input</label>
-                <input type="submit" value="submit">
+                <fieldset>
+                    <legend>Checkbox and Radio</legend>
+                    <p class="tcenter">
+                        If you want your checkbox or radio inputs to display next to its label, you must wrap it in a div with the class of <code>"check"</code> or <code>"radio"</code>.
+                    </p>
+                    <p class="tcenter">
+                        The classes check and radio technically do the same thing, therfore they are interchangeable
+                    </p>
 
-                <label>Tel Input</label>
-                <input type="tel">
+                    <!-- code snippet -->
+<code>&lt;div class=&quot;check&quot;&gt;&#13;&#10;    &lt;input type=&quot;checkbox&quot; value=&quot;check1&quot; name=&quot;check&quot;&gt;&#13;&#10;    &lt;label&gt;Checkbox 1&lt;/label&gt;&#13;&#10;&lt;/div&gt;&#13;&#10;&lt;div class=&quot;check&quot;&gt;&#13;&#10;    &lt;input type=&quot;checkbox&quot; value=&quot;check2&quot; name=&quot;check&quot;&gt;&#13;&#10;    &lt;label&gt;Checkbox 2&lt;/label&gt;&#13;&#10;&lt;/div&gt;&#13;&#10;&lt;div class=&quot;check&quot;&gt;&#13;&#10;    &lt;input type=&quot;checkbox&quot; value=&quot;check3&quot; name=&quot;check&quot;&gt;&#13;&#10;    &lt;label&gt;Checkbox 3&lt;/label&gt;&#13;&#10;&lt;/div&gt;</code>
 
-                <label>Text Input</label>
-                <input type="text">
+                    <p class="tcenter">Outputs</p>
 
-                <label>Time Input</label>
-                <input type="time">
+                    <div class="check">
+                        <input type="checkbox" value="check1" name="check">
+                        <label>Checkbox 1</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" value="check2" name="check">
+                        <label>Checkbox 2</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" value="check3" name="check">
+                        <label>Checkbox 3</label>
+                    </div>
 
-                <label>URL Input</label>
-                <input type="url">
+                    <hr>
 
-                <label>Week Input</label>
-                <input type="week">
+                    <!-- code snippet -->
+<code>&lt;div class=&quot;check&quot;&gt;&#13;&#10;    &lt;input type=&quot;radio&quot; value=&quot;radio1&quot; name=&quot;radio&quot;&gt;&#13;&#10;    &lt;label&gt;Radio 1&lt;/label&gt;&#13;&#10;&lt;/div&gt;&#13;&#10;&lt;div class=&quot;check&quot;&gt;&#13;&#10;    &lt;input type=&quot;radio&quot; value=&quot;radio2&quot; name=&quot;radio&quot;&gt;&#13;&#10;    &lt;label&gt;Radio 2&lt;/label&gt;&#13;&#10;&lt;/div&gt;&#13;&#10;&lt;div class=&quot;check&quot;&gt;&#13;&#10;    &lt;input type=&quot;radio&quot; value=&quot;radio3&quot; name=&quot;radio&quot;&gt;&#13;&#10;    &lt;label&gt;Radio 3&lt;/label&gt;&#13;&#10;&lt;/div&gt;</code>
+
+                    <p class="tcenter">Outputs</p>
+
+                    <div class="radio">
+                        <input type="radio" value="radio1" name="radio">
+                        <label>Radio 1</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" value="radio2" name="radio">
+                        <label>Radio 2</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" value="radio3" name="radio">
+                        <label>Radio 3</label>
+                    </div>
+
+                    <hr>
+
+                    <p class="tcenter">Without their containing div, they will display like this.</p>
+
+                    <label>Checkbox 1</label>
+                    <input type="checkbox" value="check1" name="check">
+
+                    <label>Checkbox 2</label>
+                    <input type="checkbox" value="check2" name="check">
+                    
+                    <label>Checkbox 3</label>
+                    <input type="checkbox" value="check3" name="check">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Advanced Field Layout</legend>
+                    <p class="tcenter">If you'd like to organize fields further, you can place them in <a href="index.html#grid">rows</a>
+                        or in divs with the class of <code>"flex"</code>.</p>
+                    <!-- code snippet  -->
+<code>&lt;div class=&quot;flex&quot;&gt;&#13;&#10;    &lt;div class=&quot;check&quot;&gt;&#13;&#10;        &lt;input type=&quot;checkbox&quot; value=&quot;check1&quot; name=&quot;check&quot;&gt;&#13;&#10;        &lt;label&gt;Check 1&lt;/label&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;    &lt;div class=&quot;check&quot;&gt;&#13;&#10;        &lt;input type=&quot;checkbox&quot; value=&quot;check2&quot; name=&quot;check&quot;&gt;&#13;&#10;        &lt;label&gt;Check 2&lt;/label&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;&lt;/div&gt;</code>
+
+                    <p class="tcenter">Outputs</p>
+
+                    <div class="flex">
+                        <div class="check">
+                            <input type="checkbox" value="check1" name="check">
+                            <label>Check 1</label>
+                        </div>
+                        <div class="check">
+                            <input type="checkbox" value="check2" name="check">
+                            <label>Check 2</label>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <!-- code snippet -->
+<code>&lt;div class=&quot;row&quot;&gt;&#13;&#10;    &lt;div class=&quot;col40&quot;&gt;&#13;&#10;        &lt;input type=&quot;text&quot; placeholder=&quot;First Name&quot;&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;    &lt;div class=&quot;col10&quot;&gt;&#13;&#10;        &lt;input type=&quot;text&quot; placeholder=&quot;M.I.&quot;&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;    &lt;div class=&quot;col50&quot;&gt;&#13;&#10;        &lt;input type=&quot;text&quot; placeholder=&quot;Last Name&quot;&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;&lt;/div&gt;</code>
+
+                    <p class="tcenter">Outputs</p>
+
+                    <div class="row">
+                        <div class="col40">
+                            <input type="text" placeholder="First Name">
+                        </div>
+                        <div class="col10">
+                            <input type="text" placeholder="M.I.">
+                        </div>
+                        <div class="col50">
+                            <input type="text" placeholder="Last Name">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <section>
+                    <h4>list of fields</h4>
+
+                    <input type="button" value="button input">
+                    
+                    <div class="check">
+                        <input type="checkbox" name="example">
+                        <label>Checkbox Input</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="example">
+                        <label>Checkbox Input</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="example">
+                        <label>Checkbox Input</label>
+                    </div>
+                    
+                    <label>Color Input</label>
+                    <input type="color">
+                    
+                    <label>Date Input</label>
+                    <input type="date">
+                    
+                    <label>Email Input</label>
+                    <input type="email">
+                    
+                    <label>File Input</label>
+                    <input type="file">
+                    
+                    <label>Month Input</label>
+                    <input type="month">
+                    
+                    <label>Number Input</label>
+                    <input type="number">
+                    
+                    <label>Password Input</label>
+                    <input type="password">
+                    
+                    <div class="radio">
+                        <input type="radio" name="radioExample">
+                        <label>radio Input</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="radioExample">
+                        <label>radio Input</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="radioExample">
+                        <label>radio Input</label>
+                    </div>
+                    
+                    <label>Range Input</label>
+                    <input type="range" list="ticks" min="0" max="10">
+
+                    <datalist id="ticks">
+                        <option value="0">
+                        <option value="1">
+                        <option value="2">
+                        <option value="3">
+                        <option value="4">
+                        <option value="5">
+                        <option value="6">
+                        <option value="7">
+                        <option value="8">
+                        <option value="9">
+                        <option value="10">
+                    </datalist>
+
+                    <input type="reset" value="reset input">
+                    
+                    <label>Search Input</label>
+                    <input type="search">
+
+                    <label>Select</label>
+                    <select>
+                        <option selected disabled>select an option</option>
+                        <option value="option1">option1</option>
+                        <option value="option2">option2</option>
+                        <option value="option3">option3</option>
+                        <optgroup label="This is an optgroup">
+                            <option value="option4">option4</option>
+                            <option value="option5">option5</option>
+                            <option value="option6">option6</option>
+                        </optgroup>
+                    </select>
+
+                    <input type="submit" value="submit input">
+                    
+                    <label>Tel Input</label>
+                    <input type="tel">
+                    
+                    <label>Text Input</label>
+                    <input type="text">
+                    
+                    <label>Time Input</label>
+                    <input type="time">
+                    
+                    <label>URL Input</label>
+                    <input type="url">
+                    
+                    <label>Week Input</label>
+                    <input type="week">
+                    
+                    <label>Textarea</label>
+                    <textarea></textarea>
+                </section>
             </form>
         </section>
     </main>

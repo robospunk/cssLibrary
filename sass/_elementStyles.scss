@@ -11,6 +11,7 @@
     transition: all 150ms ease-in-out;
     overflow-wrap: break-word;
     // word-break: break-all;
+    color: $textColor;
 }
 
 *:before, *:after {
@@ -20,6 +21,7 @@
 body {
     font-family: 'Raleway', 'Verdana', sans-serif;
     overflow-x: hidden;
+    // background: $accent;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -76,8 +78,8 @@ h6 {
 // ============================================= //
 
 header, footer {
-    position: relative;
-    z-index: 100;
+    // position: relative;
+    z-index: 105;
     background: $primary;
 }
 
@@ -95,7 +97,7 @@ main,
 
 section,
 article {
-    padding: 2rem 1rem;
+    padding: 5rem 1rem;
     border-bottom: 1px solid $darkPrimary;
 
     &:last-child {
@@ -123,9 +125,12 @@ code {
     @extend %center;
     width: max-content;
     max-width: 100%;
-    border: 1px solid $darkPrimary;
+    overflow: auto;
     background: $lightPrimary;
-    border-radius: .25rem;
+    // border: 1px solid $darkPrimary;
+    border: .1rem solid $darkPrimary;
+    border-left: .5rem solid $darkPrimary;
+    border-radius: $radius;
     font-size: 1rem;
     font-weight: 400;
     font-style: normal;
@@ -136,6 +141,8 @@ code {
     p & {
         display: inline;
         padding: 0 .25rem;
+        border: .05rem solid $darkPrimary;
+        border-left: .25rem solid $darkPrimary;
     }
 }
 
@@ -160,6 +167,7 @@ blockquote {
     max-width: 800px;
     border: .1rem solid $primary;
     border-left: .5rem solid $primary;
+    border-radius: $radius;
     background: white;
     // box-shadow: $quote;
 

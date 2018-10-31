@@ -1,3 +1,79 @@
+form {
+    max-width: 500px;
+    @extend %center;
+
+    code {
+        width: 100%;
+    }
+}
+
+fieldset {
+    position: relative;
+    max-width: 500px;
+    margin-top: 1.5rem;
+    padding: .5rem;
+    border: 2px solid $primary;
+    border-radius: $radius;
+    background: $lightPrimary;
+
+    @include md {
+        padding: 1rem;
+    }
+}
+
+legend {
+    padding: .25rem .5rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.6rem;
+    border: 2px solid $primary;
+    border-radius: $radius;
+    background: white;
+    color: black;
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: none;
+    }
+}
+
+.note {
+        position: relative;
+        right: -.5rem;
+        display: block;
+        width: fit-content;
+        padding: .25rem .5rem;
+        margin: .5rem 0 .5rem auto;
+        background: $primary;
+        border-radius: $radius 0 0 $radius;
+
+        p {margin: 0;}
+
+        h1, h2, h3, h4, h5, h6 {margin: 0;}
+
+        @include md {
+            right: -1rem;
+        }
+    }
+
+    .noteLeft {
+        position: relative;
+        left: -.5rem;
+        display: block;
+        width: fit-content;
+        padding: .25rem .5rem;
+        margin: .5rem auto .5rem 0;
+        background: $primary;
+        border-radius: 0 $radius $radius 0;
+
+        p {margin: 0;}
+
+        h1, h2, h3, h4, h5, h6 {margin: 0;}
+
+        @include md {
+            left: -1rem;
+        }
+    }
+
 input,
 textarea,
 select,
@@ -9,21 +85,24 @@ label {
     padding: .25rem;
 }
 
-label {
-    font-weight: 600;
-    margin-top: 1rem;
+input,
+textarea,
+select {
+    width: 100%;
+    max-width: 100%;
+    border: 2px solid $primary;
+    border-radius: $radius;
+    background: $lightestPrimary;
 }
 
-.check,
-.radio {
-    margin: 1rem 0 0 1rem;
-    display: flex;
-    align-items: center;
+textarea {
+    min-width: 100%;
+    min-height: 5rem;
+}
 
-    input, label {
-        padding: 0;
-        margin: 0 .5rem;
-    }
+label {
+    margin-top: 1.5rem;
+    font-weight: 600;
 }
 
 input[type="submit"],
@@ -32,9 +111,10 @@ input[type="reset"] {
     display: inline-block;
     padding: .5rem 1rem;
     margin: .25rem;
+    margin-top: 1.5rem;
+    width: auto;
     background: $darkPrimary;
     color: white;
-    border-radius: .25rem;
 
     &.accent {
         background: darken($accent, 45%);
@@ -46,5 +126,31 @@ input[type="reset"] {
 
     &.danger {
         background: darken($danger, 40%);
+    }
+}
+
+input[type="color"] {
+    background: none;
+    border: none;
+    padding: unset;
+    height: 3rem;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
+}
+
+.check,
+.radio {
+    margin: 1rem 0 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    input, label {
+        padding: 0;
+        margin: 0 .5rem;
+        width: auto;
     }
 }

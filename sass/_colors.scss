@@ -1,12 +1,20 @@
-// colors
+$primary: #b2e6ff;
 
-$primary: #b3e7ff;
+// $primary: hsl(340, 93%, 77%);
 
 $lightPrimary: lighten($primary, 12%);
+
+$lighterPrimary: lighten($primary, 25%);
+
+$lightestPrimary: lighten($primary, 50%);
 
 $darkPrimary: darken($primary, 40%);
 
 $darkerPrimary: darken($primary, 60%);
+
+$darkestPrimary: darken($primary, 70%);
+
+$invert: invert($primary);
 
 $accent: complement($primary);
 
@@ -20,8 +28,13 @@ $warning: #fffd88;
 
 $info: #9bffff;
 
-$light: #eff8ff;
+// $light: #eff8ff;
 
-$dark: #2c455a;
+// $dark: #2c455a;
 
-// colors
+$textColor: white;
+
+@if lightness($primary) >= 50 {
+    $textColor: black;
+}
+

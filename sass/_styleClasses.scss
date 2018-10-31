@@ -112,6 +112,10 @@
     background-color: $primary;
 }
 
+.invert {
+    background-color: $invert;
+}
+
 .accent {
     background-color: $accent;
 }
@@ -202,7 +206,7 @@
 
 .border {
     border: 2px solid $darkPrimary;
-    border-radius: .25rem;
+    border-radius: $radius;
     padding: 1rem;
     margin-bottom: 1rem;
 
